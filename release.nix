@@ -33,5 +33,5 @@
     dbus
   ];
 
-  runScript = builtins.getEnv "SHELL";
-}).env
+  runScript = "bash";
+})
