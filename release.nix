@@ -1,7 +1,7 @@
 { pkgs ? import <nixpkgs> {} }:
 
-pkgs.buildFHSEnv {
-  name = "vpinball";
+(pkgs.buildFHSEnv {
+  name = "vpinball-env";
 
   targetPkgs = pkgs: with pkgs; [
     libGL
@@ -33,5 +33,5 @@ pkgs.buildFHSEnv {
     dbus
   ];
 
-  runScript = "${builtins.toString ./.}/build/VPinballX_BGFX";
-}
+  runScript = builtins.getEnv "SHELL";
+}).env
