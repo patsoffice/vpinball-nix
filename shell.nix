@@ -15,6 +15,12 @@ let
       curl
       nasm
       zlib
+
+      # Rust
+      rustc
+      cargo
+      rustfmt
+      clippy
     ];
 
     shellHook = ''
@@ -46,6 +52,12 @@ let
       bison
       curl
       gnumake
+
+      # Rust
+      rustc
+      cargo
+      rustfmt
+      clippy
 
       # Compression
       zlib
